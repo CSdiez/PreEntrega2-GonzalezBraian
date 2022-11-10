@@ -7,7 +7,7 @@ import {PuffLoader} from "react-spinners"
 
 const ItemDetailContainer = () => {
 
-    const {name} = useParams()
+    const {id} = useParams()
 
     const [character, setCharacter] = useState(null)
 
@@ -15,12 +15,12 @@ const ItemDetailContainer = () => {
 
        
     const getCharacterDetail = async () => {    
-        const response = await fetch(`https://dragon-ball-super-api.herokuapp.com/api/characters/${name}`)
+        const response = await fetch(`https://dragon-ball-super-api.herokuapp.com/api/characters/${id}`)
         const character = await response.json()
         setCharacter(character)
     }
         getCharacterDetail()
-    }, [name])
+    }, [id])
 
     return (character ? <ItemDetail character={character}/> : <PuffLoader className="spinner"/>)
 };

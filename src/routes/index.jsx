@@ -20,7 +20,7 @@ const router = createBrowserRouter([
                 element: <ItemListContainer />,
             },
             {
-                path: "/detail/:name",
+                path: "/detail/:id",
                 element: <ItemDetailContainer/>,
             },
         ],

@@ -17,6 +17,7 @@ export default function ItemListContainer() {
             console.log(categoryId)
             let response = await fetch('https://dragon-ball-super-api.herokuapp.com/api/characters/')
             const data = await response.json()
+            console.log(data);
             if(categoryId){
                 setProducts(data.filter( p => p.name === categoryId))
                 }else{
