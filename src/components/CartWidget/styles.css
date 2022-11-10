@@ -1,0 +1,21 @@
+.Cart {
+    background: #072083;
+    height: 80px;
+    position: relative;
+    width: 80px;
+    cursor:pointer;
+}
+.Cart:hover{
+    background: black;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+

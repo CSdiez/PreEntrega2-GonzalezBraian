@@ -1,0 +1,39 @@
+*{
+    list-style:none;
+}
+nav {
+    background: #072083;
+    height: 80px;
+    width: 100%;
+}
+
+.container {
+    margin: 0;
+    display: flex;
+    line-height: 80px;
+}
+
+.links{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.list{
+    display: flex;
+    flex-direction:row;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 25px;
+    letter-spacing: 3px;
+    transition: .3s;
+}
+
+
+.link:hover{
+    background-color: black;
+    color: black;
+}
