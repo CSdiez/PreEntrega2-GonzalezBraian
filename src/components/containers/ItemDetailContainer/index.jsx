@@ -15,9 +15,10 @@ const ItemDetailContainer = () => {
 
        
     const getCharacterDetail = async () => {    
-        const response = await fetch(`https://dragon-ball-super-api.herokuapp.com/api/characters/${id}`)
+        const response = await fetch(`https://dragon-ball-super-api.herokuapp.com/api/characters`)
         const character = await response.json()
-        setCharacter(character)
+        const filterData = (character.find(p => p.id === parseInt(id)))
+        setCharacter(filterData)
     }
         getCharacterDetail()
     }, [id])

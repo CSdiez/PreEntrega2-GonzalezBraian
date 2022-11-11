@@ -10,6 +10,8 @@ export default function ItemListContainer() {
 
     const {categoryId} = useParams()
 
+    
+
     useEffect(() => {
         ( async  () => {
 
@@ -19,11 +21,10 @@ export default function ItemListContainer() {
             const data = await response.json()
             console.log(data);
             if(categoryId){
-                setProducts(data.filter( p => p.name === categoryId))
+                setProducts(data.filter( p => p.specie === categoryId))
                 }else{
                     setProducts(data)
                 }
-    
             
         } catch (error) {
             console.log(error)
